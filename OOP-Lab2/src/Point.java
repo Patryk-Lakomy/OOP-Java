@@ -1,11 +1,16 @@
 public class Point {
-    public float x;
-    public float y;
+    private float x;
+    private float y;
 
 
     public Point(float x, float y) {
         this.x = x;
         this.y = y;
+    }
+
+    public Point(){
+        this.x=0;
+        this.y=0;
     }
 
     public String toString() {
@@ -25,5 +30,23 @@ public class Point {
        Point nowy=new Point(this.x+dx,this.y+dy);
        return nowy;
     }
+
+    public float getX() {
+        return x;
+    }
+
+    public float getY() {
+        return y;
+    }
+
+    public void setX(float x) {
+        this.x = x;
+    }
+
+    public void setY(float y) {
+        this.y = y;
+    }
+
+
 }
 
