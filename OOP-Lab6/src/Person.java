@@ -6,12 +6,14 @@ public class Person implements Comparable{
     private String nazwisko;
     private LocalDate dataUrodzin;
     private Set<Person> childrenSet;
+    private LocalDate dataŚmierci;
 
-    public Person(String imie, String nazwisko, LocalDate dataUrodzin) {
+    public Person(String imie, String nazwisko, LocalDate dataUrodzin,LocalDate dataŚmierci) {
         this.imie = imie;
         this.nazwisko = nazwisko;
         this.dataUrodzin = dataUrodzin;
         this.childrenSet=new HashSet<>();
+        this.dataŚmierci=dataŚmierci;
     }
 
     public boolean adopt(Person children){
@@ -56,6 +58,12 @@ public Person getYoungestChild(){
         else return 0;
     }
 
+    public Person fromCsvLine(String line){
+        //Marek Kowalski,15.05.1899,25.06.1957,,
+        
+
+        return
+    };
     public  String getImie() {
         return imie;
     }
